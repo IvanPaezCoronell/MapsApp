@@ -1,15 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Image } from 'react-native'
+
 import { Button } from 'react-native-elements'
-import { useNavigation } from '@react-navigation/core'
-export default function Home() {
-    const navigation = useNavigation()
+
+
+export default function UserGuest() {
+    
     return (
-        <ScrollView 
-        centerContent
-        style={styles.viewBody}>
+        <ScrollView
+            centerContent
+            style={styles.viewBody}
+        >
             <Image
-            source={require("../assets/google-maps.png")}
+            source={require("../../assets/google-maps.png")}
             resizeMode="contain"
             style={styles.image}
             />
@@ -20,8 +23,9 @@ export default function Home() {
             <Button
             buttonStyle={styles.button}
             title="Perfil"
-            onPress={() => navigation.navigate("login")}
+            onPress={() => console.log("Click!")}
             />
+
 
         </ScrollView>
     )
@@ -34,8 +38,8 @@ const styles = StyleSheet.create({
     image: {
         height: 300,
         width: "100%",
-        marginBottom: 20
-
+        marginBottom: 10,
+        
     },
     title: {
         fontWeight: "bold",
@@ -50,7 +54,7 @@ const styles = StyleSheet.create({
 
     },
     button: {
-        backgroundColor: "#C3004e",
-        
+        backgroundColor: "#ea4989"
     }
 })
+
